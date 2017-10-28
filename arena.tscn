@@ -1,0 +1,119 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://arena.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://boid.tscn" type="PackedScene" id=3]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Sprite
+
+var vel = Vector2()
+
+func _ready():
+	set_fixed_process( true )
+func _fixed_process(delta):
+	var curpos = get_pos()
+	set_global_pos( get_global_mouse_pos() )
+	vel = ( get_pos() - curpos ) / delta
+"
+
+[node name="arena" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 115.5, 526.5 )
+transform/scale = Vector2( 0.515625, 0.515625 )
+texture = ExtResource( 2 )
+script/script = SubResource( 1 )
+
+[node name="boid" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid1" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid2" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid3" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid4" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid5" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid6" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid7" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid8" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid9" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid10" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid11" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid12" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid13" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid14" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid15" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid16" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid17" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid18" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid19" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+[node name="boid20" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 594, 266 )
+
+
