@@ -1,0 +1,183 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://sea_background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://flocking_fish.tscn" type="PackedScene" id=3]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Node2D
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+
+func _ready():
+	var fish = get_tree().get_nodes_in_group( \"fish\" )
+	for f in fish:
+		f.set_target( get_node( \"player\" ) )
+"
+
+[node name="demo_flocking" type="Node2D"]
+
+script/script = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sea_background" parent="." instance=ExtResource( 1 )]
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 810, 100 )
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = 0
+limit/top = 0
+limit/right = 1024
+limit/bottom = 964
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = true
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fish" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="flocking_fish" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 181, 213 )
+
+[node name="flocking_fish7 3" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 136, 234 )
+
+[node name="flocking_fish3" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 231, 230 )
+
+[node name="flocking_fish7 4" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 186, 251 )
+
+[node name="flocking_fish4" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 184, 266 )
+
+[node name="flocking_fish7 2" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 139, 287 )
+
+[node name="flocking_fish5" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 246, 274 )
+
+[node name="flocking_fish7 5" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 201, 295 )
+
+[node name="flocking_fish6" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 272, 259 )
+
+[node name="flocking_fish7" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 227, 280 )
+
+[node name="flocking_fish1" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 142, 300 )
+
+[node name="flocking_fish7 7" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 97, 321 )
+
+[node name="flocking_fish3 2" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 192, 317 )
+
+[node name="flocking_fish37 4" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 147, 338 )
+
+[node name="flocking_fish33" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 145, 353 )
+
+[node name="flocking_fish37 3" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 100, 374 )
+
+[node name="flocking_fish35 2" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 207, 361 )
+
+[node name="flocking_fish354 2" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 162, 382 )
+
+[node name="flocking_fish353" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 233, 346 )
+
+[node name="flocking_fish354" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 188, 367 )
+
+[node name="flocking_fish2" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 254, 317 )
+
+[node name="flocking_fish7 6" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 209, 338 )
+
+[node name="flocking_fish3 3" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 304, 334 )
+
+[node name="flocking_fish37 5" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 259, 355 )
+
+[node name="flocking_fish34" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 257, 370 )
+
+[node name="flocking_fish37" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 212, 391 )
+
+[node name="flocking_fish35" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 319, 378 )
+
+[node name="flocking_fish37 2" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 274, 399 )
+
+[node name="flocking_fish36" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 345, 363 )
+
+[node name="flocking_fish37 6" parent="fish" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 300, 384 )
+
+
